@@ -13,12 +13,9 @@ import random
 import datetime
 from download_resources import download
 
-content = download()
+content = download() # 
 adjectives = content[1].replace("\r","").split("\n")[:-1]
 nouns = content[0].split(", ")
-
-print(adjectives)
-print(nouns)
 
 seed = str(input("Type seed or generate a new one? (a - seed, b - generate) : "))
 if seed == "a":
