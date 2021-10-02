@@ -1,4 +1,5 @@
 from gpg import gpg_enc, gpg_dec
+import getpass
 import requests
 import codecs
 
@@ -7,7 +8,7 @@ def download():
 	
 	pastebin_links = ["https://pastebin.com/raw/2ns0hxRY","https://pastebin.com/raw/S3FdBhQE"]
 
-	pw = str(input("Input password: "))
+	pw = getpass.getpass(prompt='Password: ', stream=None)
 
 	content = []
 	for flink in pastebin_links:
